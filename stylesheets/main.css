@@ -86,7 +86,8 @@ body {
 	margin: 0;
 	font-weight: bold;
 }
-.main-nav ul li a {
+.main-nav ul li a, .main-nav ul li a:visited {
+  border: transparent solid 1px;
 	display: inline-block;
 	text-transform: uppercase;
 	text-decoration: none;
