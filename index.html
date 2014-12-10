@@ -17,11 +17,12 @@
       for (var i = 0; i < navbarLinks.length; i++) {
         debugger;
         if (navbarLinks[i].tagName = "LI") {
-          navbarLinks[i].click(function () {
+          console.log(navbarLinks[i]);
+          navbarLinks[i].click(function() {
             debugger;
             // $('.menu-pages').children.not(this).removeClass('selected');
             if (! $(this).hasClass('selected'))
-            $(this).addClass('selected');
+              $(this).addClass('selected');
           });
 
         }
