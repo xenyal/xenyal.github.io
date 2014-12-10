@@ -17,7 +17,7 @@
       for (var i = 0; i < navbarLinks.length; i++) {
         if (navbarLinks[i].tagName == "LI") {
           debugger;
-          var selectedLink = navbarLinks[i].children[i];
+          var selectedLink = navbarLinks[i].children[0];
           selectedLink.click(function() {
             debugger;
             // $('.menu-pages').children.not(this).removeClass('selected');
