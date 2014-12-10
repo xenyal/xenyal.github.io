@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script>
-    (function() {
+    $(document).ready(function() {
       var navbarLinks = $(".menu-pages").children;
 
       for (var i = 0; i < navbarLinks.length; i++) {
@@ -27,7 +27,7 @@
         }
       }
 
-    }());
+    });
     </script>
     <!--[if lt IE 9]>
     <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
