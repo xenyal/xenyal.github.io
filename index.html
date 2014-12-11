@@ -12,20 +12,15 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script>
     $(document).ready(function() {
-      var navbarLinks = $(".menu-pages")[0].children;
-      for (var i = 0; i < navbarLinks.length; i++) {
-        if (navbarLinks[i].tagName == "LI") {
-          debugger;
-          var selectedLink = navbarLinks[i].children;
-          $(selectedLink).click(function() {
-            debugger;
-            var self = $(this);
-            self.siblings().removeClass('selected');
-            self.addClass('selected');
-          });
-
-        }
-      }
+      var navbarLinks = $("#menu-item");
+      debugger;
+      $(selectedLink).click(function() {
+        debugger;
+        var self = $(this);
+        self.siblings().removeClass('selected');
+        self.addClass('selected');
+      });    
+    }
 
     });
     </script>
@@ -41,31 +36,31 @@
   <div class="navigation">
     <nav class="main-nav">
       <ul class="menu-pages">
-        <li class="menu-home">
+        <li id="menu-item">
           <a href="#" title="Home">Home</a>
         </li>
         <span class="spacer"></span>
-        <li class="menu-aboutme">
+        <li id="menu-item">
           <a href="#" title="About">About</a>
         </li>
         <span class="spacer"></span>
-        <li class="menu-blog">
+        <li id="menu-item">
           <a href="#" title="Blog">Blog</a>
         </li>
         <span class="spacer"></span>
-        <li class="menu-resume">
+        <li id="menu-item">
           <a href="#" title="Resume">Resume</a>
         </li>
         <span class="spacer"></span>
-        <li class="menu-github">
+        <li id="menu-item">
           <a href="#" title="GitHub">GitHub</a>
         </li>
         <span class="spacer"></span>
-        <li class="menu-linkedin">
+        <li id="menu-item">
           <a href="#" title="LinkedIn">LinkedIn</a>
         </li>
         <span class="spacer"></span>
-        <li class="menu-so">
+        <li id="menu-item">
           <a href="#" title="Stack Overflow">Stack Overflow</a>
         </li>
       </ul>
