@@ -87,7 +87,6 @@ body {
 	font-weight: bold;
 }
 .main-nav ul li a, .main-nav ul li a:visited {
-  border: transparent solid 2px;
 	display: inline-block;
 	text-transform: uppercase;
 	text-decoration: none;
@@ -98,6 +97,9 @@ body {
 	transition: border-bottom 0.2s ease;
 }
 .menu-item {
+  border: transparent solid 2px;
+}
+.menu-item:hover {
 	border-top: #CEEC97 solid 2px;
 }
 .navigation .spacer:after {
