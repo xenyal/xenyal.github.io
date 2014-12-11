@@ -12,17 +12,15 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script>
     $(document).ready(function() {
-      debugger;
       var navbarLinks = $(".menu-pages")[0].children;
-
       for (var i = 0; i < navbarLinks.length; i++) {
         if (navbarLinks[i].tagName == "LI") {
-          debugger;
           var selectedLink = navbarLinks[i].children;
           selectedLink.click(function() {
             debugger;
-            navbarLinks.not(this).removeClass('selected');
-            $(this).addClass('selected');
+            var self = $(this);
+            self.siblings().removeClass('selected');
+            self.addClass('selected');
           });
 
         }
