@@ -97,7 +97,7 @@ body {
 	-webkit-transition: border-bottom 0.2s ease;
 	transition: border-bottom 0.2s ease;
 }
-.main-nav ul li:hover {
+.menu-item {
 	border-top: #CEEC97 solid 2px;
 }
 .navigation .spacer:after {
