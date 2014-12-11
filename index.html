@@ -17,7 +17,7 @@
         if (navbarLinks[i].tagName == "LI") {
           debugger;
           var selectedLink = navbarLinks[i].children;
-          selectedLink.click(function() {
+          $(selectedLink).click(function() {
             debugger;
             var self = $(this);
             self.siblings().removeClass('selected');
