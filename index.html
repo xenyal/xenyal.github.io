@@ -11,17 +11,7 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
     <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
     <script type="text/javascript" src="javascripts/jquery.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            debugger;
-            var navbarLinks = document.getElementsByClassName("menu-item");
-            $(navbarLinks).click(function() {
-                var self = $(this);
-                self.siblings().removeClass('selected');
-                self.addClass('selected');
-            });
-        });
-    </script>
+
     <!--[if lt IE 9]>
     <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -124,6 +114,18 @@ $ git checkout gh-pages
             var s = document.getElementsByTagName('script')[0];
             s.parentNode.insertBefore(ga, s);
         })();
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            debugger;
+            var navbarLinks = document.getElementsByClassName("menu-item");
+            $(navbarLinks).click(function() {
+                var self = $(this);
+                self.siblings().removeClass('selected');
+                self.addClass('selected');
+            });
+        });
     </script>
 
 </body>
