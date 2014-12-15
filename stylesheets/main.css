@@ -109,6 +109,7 @@ body {
 }
 .menu-pages {
 	margin-left: 20px;
+  white-space: nowrap;
 	text-align: center;
 }
 .selected {
