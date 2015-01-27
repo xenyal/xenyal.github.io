@@ -1,0 +1,174 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 360.0,
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Vincent Li/Desktop/description/offline.js",
+		"/C/Users/Vincent Li/Desktop/test.xml",
+		"/C/Users/Vincent Li/Desktop/description/Brand.css",
+		"/C/Users/Vincent Li/Desktop/description/a99e8592-b830-42ac-b19e-2ff3cb862a35Combined.css",
+		"/C/Users/Vincent Li/Desktop/PetitionLetter.txt",
+		"/G/Development/GitRepo/xenyal.github.io/CNAME",
+		"/G/Development/GitRepo/xenyal.github.io/.git/config",
+		"/G/Development/GitRepo/xenyal.github.io/Subpages/main.js",
+		"/G/Development/GitRepo/xenyal.github.io/Subpages/styles.scss",
+		"/G/Development/GitRepo/xenyal.github.io/Subpages/Christmas_SPA.html",
+		"/G/Development/GitRepo/xenyal.github.io/stylesheets/print.css",
+		"/G/Development/GitRepo/xenyal.github.io/stylesheets/stylesheet.css",
+		"/G/Development/GitRepo/ParallaxJS/parallax/source/parallax.js",
+		"/G/Development/GitRepo/xenyal.github.io/index.html",
+		"/G/Development/GitRepo/ParallaxJS/parallax/examples/simple.html",
+		"/C/Users/Vincent Li/Desktop/WebDevelopmentAssets/test.html",
+		"/C/Users/Vincent Li/Desktop/miserables.json",
+		"/C/Users/Vincent Li/Desktop/test.html",
+		"/G/Development/Workspace/Python/spiral.py",
+		"/G/Development/Workspace/NodeJS/ArraySplit/example_log.txt",
+		"/G/Development/Workspace/NodeJS/ArraySplit/server.js",
+		"/G/Downloads/a08q2.py",
+		"/C/Users/Vincent Li/Desktop/isaac.html",
+		"/C/Users/Vincent Li/Desktop/index.html",
+		"/C/Users/Vincent Li/Desktop/html5test.html",
+		"/G/Development/Workspace/NodeJS/server.js",
+		"/C/Program Files (x86)/HTML Help Workshop/hhc.exe",
+		"/G/Development/GitRepo/xenyal.github.io/params.json",
+		"/C/Users/Vincent Li/Downloads/expresscheckoutvalidatedataflow.htm",
+		"/C/Users/Vincent Li/AppData/Roaming/Sublime Text 2/Packages/User/Default (Windows).sublime-keymap"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Zoomer",
+			"white",
+			"black",
+			"escapeForHtml\n",
+			"_satellite",
+			"orientationChange",
+			"orientationchange",
+			"_satellite",
+			"orientationchange",
+			"isRegex",
+			".on(\"orientationchange\")",
+			".on(\"orientationchange\""
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 124.0,
+	"status_bar_visible": true
+}
