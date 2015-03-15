@@ -7,22 +7,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "index.html",
-			"settings":
-			{
-				"buffer_size": 2738,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "stylesheets/main.css",
-			"settings":
-			{
-				"buffer_size": 2017,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -48,6 +32,17 @@
 	},
 	"file_history":
 	[
+		"/G/Development/xenyal.github.io/index.html",
+		"/C/Users/Vincent Li/Desktop/PagePreloadingEffect/js/classie.js",
+		"/G/Development/xenyal.github.io/stylesheets/main.css",
+		"/C/Users/Vincent Li/Desktop/PagePreloadingEffect/js/pathLoader.js",
+		"/C/Users/Vincent Li/Desktop/PagePreloadingEffect/js/main.js",
+		"/G/Development/GitRepo/ParallaxJS/parallax/source/parallax.js",
+		"/G/Development/GitRepo/ParallaxJS/parallax/.travis.yml",
+		"/G/Program Files/SteamLibrary/steamapps/common/Counter-Strike Global Offensive/csgo/cfg/practicecfg.cfg",
+		"/G/Development/GitRepo/ParallaxJS/parallax/index.html",
+		"/G/Downloads/practicecfg/practicecfg.cfg",
+		"/C/Users/Vincent Li/Desktop/PagePreloadingEffect/index.html",
 		"/G/Development/xenyal.github.io/javascripts/prefixfree.js",
 		"/G/Development/xenyal.github.io/stylesheets/stylesheet.css",
 		"/G/Development/xenyal.github.io/stylesheets/print.css",
@@ -63,7 +58,6 @@
 		"/G/Development/GitRepo/xenyal.github.io/Subpages/Christmas_SPA.html",
 		"/G/Development/GitRepo/xenyal.github.io/stylesheets/print.css",
 		"/G/Development/GitRepo/xenyal.github.io/stylesheets/stylesheet.css",
-		"/G/Development/GitRepo/ParallaxJS/parallax/source/parallax.js",
 		"/G/Development/GitRepo/xenyal.github.io/index.html",
 		"/G/Development/GitRepo/ParallaxJS/parallax/examples/simple.html",
 		"/C/Users/Vincent Li/Desktop/WebDevelopmentAssets/test.html",
@@ -98,6 +92,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"NAME",
+			"onDeviceOrientation",
+			"enable",
+			"updateDimensions",
+			"updateLayers",
+			"initialise",
+			"DEFAULTS",
+			"classie",
 			"Zoomer",
 			"white",
 			"black",
@@ -127,65 +129,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "index.html",
-					"settings":
-					{
-						"buffer_size": 2738,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								775,
-								775
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 54.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "stylesheets/main.css",
-					"settings":
-					{
-						"buffer_size": 2017,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
