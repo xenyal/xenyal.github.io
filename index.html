@@ -1,83 +1,83 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    
-    <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
-    
-    <script type="text/javascript" src="javascripts/jquery.min.js"></script>
-    <script type="text/javascript" src="javascripts/modernizr.min.js"></script>
+        
+        <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+        
+        <script type="text/javascript" src="javascripts/jquery.min.js"></script>
+        <script type="text/javascript" src="javascripts/modernizr.min.js"></script>
 
-    <!--[if lt IE 9]>
-    <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+        <!--[if lt IE 9]>
+        <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
 
-    <title>Home | Vincent Li</title>
-</head>
+        <title>Home | Vincent Li</title>
+    </head>
 
-<body>
-    <div class="content">
-        <div class="random">
-            <span data-number='0' class="nbr ltr no-select">0</span>
-            <span data-number='0' class="nbr ltr no-select">0</span>
-            <span data-number='0' class="nbr ltr no-select">0</span>
-            <span data-number='0' class="nbr ltr no-select">0</span>
-            <span data-number='0' class="nbr ltr no-select">0</span>
-            <span data-number='0' class="nbr ltr no-select">0</span>
-            <span data-number='0' class="nbr ltr no-select">0</span>
-                <span class="space"></span>
-            <span data-number='0' class="nbr ltr no-select">0</span>
-            <span data-number='0' class="nbr ltr no-select">0</span>
+    <body>
+        <div class="content">
+            <div class="random">
+                <span data-number='0' class="nbr ltr no-select">0</span>
+                <span data-number='0' class="nbr ltr no-select">0</span>
+                <span data-number='0' class="nbr ltr no-select">0</span>
+                <span data-number='0' class="nbr ltr no-select">0</span>
+                <span data-number='0' class="nbr ltr no-select">0</span>
+                <span data-number='0' class="nbr ltr no-select">0</span>
+                <span data-number='0' class="nbr ltr no-select">0</span>
+                    <span class="space"></span>
+                <span data-number='0' class="nbr ltr no-select">0</span>
+                <span data-number='0' class="nbr ltr no-select">0</span>
+            </div>
         </div>
-    </div>
-    <script>
-    $(document).ready(function() {
-        var $randomnbr = $('.nbr');
-        var $timer = 10;
-        var $it;
-        var $data = 0;
-        var index;
-        var change;
-        var letters = ["v", "i", "n", "c", "e", "n", "t", "l", "i"];
-
-        $('.nbr').each(function() {
-
-            change = Math.round(Math.random() * 100);
-            $(this).attr('data-change', change);
-
-        });
-
-        function random() {
-            return Math.round(Math.random() * 9);
-        };
-
-        function select() {
-            return Math.round(Math.random() * $randomnbr.length + 1);
-        };
-
-        function value() {
-            $('.nbr:nth-child(' + select() + ')').html('' + random() + '');
-            $('.nbr:nth-child(' + select() + ')').attr('data-number', $data);
-            $data++;
+        <script>
+        $(document).ready(function() {
+            var $randomnbr = $('.nbr');
+            var $timer = 10;
+            var $it;
+            var $data = 0;
+            var index;
+            var change;
+            var letters = ["v", "i", "n", "c", "e", "n", "t", "l", "i"];
 
             $('.nbr').each(function() {
-                if (parseInt($(this).attr('data-number')) > parseInt($(this).attr('data-change'))) {
-                    index = $('.ltr').index(this);
-                    $(this).html(letters[index]);
-                    $(this).removeClass('nbr');
-                }
+
+                change = Math.round(Math.random() * 100);
+                $(this).attr('data-change', change);
+
             });
 
-        };
+            function random() {
+                return Math.round(Math.random() * 9);
+            };
 
-        $it = setInterval(value, $timer);
+            function select() {
+                return Math.round(Math.random() * $randomnbr.length + 1);
+            };
 
-    });    
-    </script>
-</body>
+            function value() {
+                $('.nbr:nth-child(' + select() + ')').html('' + random() + '');
+                $('.nbr:nth-child(' + select() + ')').attr('data-number', $data);
+                $data++;
+
+                $('.nbr').each(function() {
+                    if (parseInt($(this).attr('data-number')) > parseInt($(this).attr('data-change'))) {
+                        index = $('.ltr').index(this);
+                        $(this).html(letters[index]);
+                        $(this).removeClass('nbr');
+                    }
+                });
+
+            };
+
+            $it = setInterval(value, $timer);
+
+        });    
+        </script>
+    </body>
 
 </html>

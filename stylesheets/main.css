@@ -22,7 +22,7 @@ html .content span, body .content span {
   width: 30px;
   display: inline-block;
 }
-span .no-select {
+.no-select {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
