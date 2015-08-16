@@ -1,5 +1,5 @@
 var universe = (function() {
-
+debugger;
     window.addEventListener('resize', windowResizeHandler, false);
 
     function createUniverse() {
