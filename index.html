@@ -148,9 +148,6 @@
         <script>
         (function($, Modernizr) {
 debugger;
-            createUniverse();
-            windowResizeHandler();
-
             window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
             window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
 
@@ -174,6 +171,9 @@ debugger;
             var index;
             var change;
             var letters = ["v", "i", "n", "c", "e", "n", "t", "l", "i"];
+
+            createUniverse();
+            windowResizeHandler();
 
             $('.nbr').each(function() {
 
