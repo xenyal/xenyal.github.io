@@ -169,6 +169,15 @@
         var cometColor = '226,225,224';
         var canva = document.getElementById('universe');
         var stars = [];
+        var stats = new Stats();
+        
+        stats.setMode(1); // 0: fps, 1: ms
+
+        stats.domElement.style.position = 'absolute';
+        stats.domElement.style.left = '0px';
+        stats.domElement.style.top = '0px';
+
+        document.body.appendChild( stats.domElement );
 
         windowResizeHandler();
         window.addEventListener('resize', windowResizeHandler, false);
@@ -205,15 +214,6 @@
 
             stat.end();
         }
-
-        var stats = new Stats();
-        stats.setMode(1); // 0: fps, 1: ms
-
-        stats.domElement.style.position = 'absolute';
-        stats.domElement.style.left = '0px';
-        stats.domElement.style.top = '0px';
-
-        document.body.appendChild( stats.domElement );
 
         function Star() {
 
