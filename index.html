@@ -21,7 +21,7 @@
 
     <body>
         <div class="content">
-            <div class="random">
+            <div class="random no-select">
                 <span data-number='0' class="nbr ltr no-select">0</span>
                 <span data-number='0' class="nbr ltr no-select">0</span>
                 <span data-number='0' class="nbr ltr no-select">0</span>
@@ -35,7 +35,7 @@
             </div>
         </div>
         <script>
-        $(document).ready(function() {
+        (function($, Modernizr) {
             var $randomnbr = $('.nbr');
             var $timer = 10;
             var $it;
@@ -76,7 +76,7 @@
 
             $it = setInterval(value, $timer);
 
-        });    
+        }(jQuery, Modernizr));    
         </script>
     </body>
 
