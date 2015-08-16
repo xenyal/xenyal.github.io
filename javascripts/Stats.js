@@ -4,92 +4,113 @@
 
 var Stats = function () {
 
-	var startTime = Date.now(), prevTime = startTime;
-	var ms = 0, msMin = Infinity, msMax = 0;
-	var fps = 0, fpsMin = Infinity, fpsMax = 0;
+	var now = ( self.performance && self.performance.now ) ? self.performance.now.bind( performance ) : Date.now;
+
+	var startTime = now(), prevTime = startTime;
 	var frames = 0, mode = 0;
 
-	var container = document.createElement( 'div' );
-	container.id = 'stats';
-	container.addEventListener( 'mousedown', function ( event ) { event.preventDefault(); setMode( ++ mode % 2 ) }, false );
-	container.style.cssText = 'width:80px;opacity:0.9;cursor:pointer';
+	function createElement( tag, id, css ) {
 
-	var fpsDiv = document.createElement( 'div' );
-	fpsDiv.id = 'fps';
-	fpsDiv.style.cssText = 'padding:0 0 3px 3px;text-align:left;background-color:#002';
-	container.appendChild( fpsDiv );
-
-	var fpsText = document.createElement( 'div' );
-	fpsText.id = 'fpsText';
-	fpsText.style.cssText = 'color:#0ff;font-family:Helvetica,Arial,sans-serif;font-size:9px;font-weight:bold;line-height:15px';
-	fpsText.innerHTML = 'FPS';
-	fpsDiv.appendChild( fpsText );
-
-	var fpsGraph = document.createElement( 'div' );
-	fpsGraph.id = 'fpsGraph';
-	fpsGraph.style.cssText = 'position:relative;width:74px;height:30px;background-color:#0ff';
-	fpsDiv.appendChild( fpsGraph );
-
-	while ( fpsGraph.children.length < 74 ) {
-
-		var bar = document.createElement( 'span' );
-		bar.style.cssText = 'width:1px;height:30px;float:left;background-color:#113';
-		fpsGraph.appendChild( bar );
+		var element = document.createElement( tag );
+		element.id = id;
+		element.style.cssText = css;
+		return element;
 
 	}
 
-	var msDiv = document.createElement( 'div' );
-	msDiv.id = 'ms';
-	msDiv.style.cssText = 'padding:0 0 3px 3px;text-align:left;background-color:#020;display:none';
-	container.appendChild( msDiv );
+	function createPanel( id, fg, bg ) {
 
-	var msText = document.createElement( 'div' );
-	msText.id = 'msText';
-	msText.style.cssText = 'color:#0f0;font-family:Helvetica,Arial,sans-serif;font-size:9px;font-weight:bold;line-height:15px';
-	msText.innerHTML = 'MS';
-	msDiv.appendChild( msText );
+		var div = createElement( 'div', id, 'padding:0 0 3px 3px;text-align:left;background:' + bg );
 
-	var msGraph = document.createElement( 'div' );
-	msGraph.id = 'msGraph';
-	msGraph.style.cssText = 'position:relative;width:74px;height:30px;background-color:#0f0';
-	msDiv.appendChild( msGraph );
+		var text = createElement( 'div', id + 'Text', 'font-family:Helvetica,Arial,sans-serif;font-size:9px;font-weight:bold;line-height:15px;color:' + fg );
+		text.innerHTML = id.toUpperCase();
+		div.appendChild( text );
 
-	while ( msGraph.children.length < 74 ) {
+		var graph = createElement( 'div', id + 'Graph', 'width:74px;height:30px;background:' + fg );
+		div.appendChild( graph );
 
-		var bar = document.createElement( 'span' );
-		bar.style.cssText = 'width:1px;height:30px;float:left;background-color:#131';
-		msGraph.appendChild( bar );
+		for ( var i = 0; i < 74; i ++ ) {
+
+			graph.appendChild( createElement( 'span', '', 'width:1px;height:30px;float:left;opacity:0.9;background:' + bg ) );
+
+		}
+
+		return div;
 
 	}
 
-	var setMode = function ( value ) {
+	function setMode( value ) {
+
+		var children = container.children;
+
+		for ( var i = 0; i < children.length; i ++ ) {
+
+			children[ i ].style.display = i === value ? 'block' : 'none';
+
+		}
 
 		mode = value;
 
-		switch ( mode ) {
+	}
 
-			case 0:
-				fpsDiv.style.display = 'block';
-				msDiv.style.display = 'none';
-				break;
-			case 1:
-				fpsDiv.style.display = 'none';
-				msDiv.style.display = 'block';
-				break;
-		}
-
-	};
-
-	var updateGraph = function ( dom, value ) {
+	function updateGraph( dom, value ) {
 
 		var child = dom.appendChild( dom.firstChild );
-		child.style.height = value + 'px';
+		child.style.height = Math.min( 30, 30 - value * 30 ) + 'px';
 
-	};
+	}
+
+	//
+
+	var container = createElement( 'div', 'stats', 'width:80px;opacity:0.9;cursor:pointer' );
+	container.addEventListener( 'mousedown', function ( event ) {
+
+		event.preventDefault();
+		setMode( ++ mode % container.children.length );
+
+	}, false );
+
+	// FPS
+
+	var fps = 0, fpsMin = Infinity, fpsMax = 0;
+
+	var fpsDiv = createPanel( 'fps', '#0ff', '#002' );
+	var fpsText = fpsDiv.children[ 0 ];
+	var fpsGraph = fpsDiv.children[ 1 ];
+
+	container.appendChild( fpsDiv );
+
+	// MS
+
+	var ms = 0, msMin = Infinity, msMax = 0;
+
+	var msDiv = createPanel( 'ms', '#0f0', '#020' );
+	var msText = msDiv.children[ 0 ];
+	var msGraph = msDiv.children[ 1 ];
+
+	container.appendChild( msDiv );
+
+	// MEM
+
+	if ( self.performance && self.performance.memory ) {
+
+		var mem = 0, memMin = Infinity, memMax = 0;
+
+		var memDiv = createPanel( 'mb', '#f08', '#201' );
+		var memText = memDiv.children[ 0 ];
+		var memGraph = memDiv.children[ 1 ];
+
+		container.appendChild( memDiv );
+
+	}
+
+	//
+
+	setMode( mode );
 
 	return {
 
-		REVISION: 12,
+		REVISION: 14,
 
 		domElement: container,
 
@@ -97,20 +118,20 @@ var Stats = function () {
 
 		begin: function () {
 
-			startTime = Date.now();
+			startTime = now();
 
 		},
 
 		end: function () {
 
-			var time = Date.now();
+			var time = now();
 
 			ms = time - startTime;
 			msMin = Math.min( msMin, ms );
 			msMax = Math.max( msMax, ms );
 
-			msText.textContent = ms + ' MS (' + msMin + '-' + msMax + ')';
-			updateGraph( msGraph, Math.min( 30, 30 - ( ms / 200 ) * 30 ) );
+			msText.textContent = ( ms | 0 ) + ' MS (' + ( msMin | 0 ) + '-' + ( msMax | 0 ) + ')';
+			updateGraph( msGraph, ms / 200 );
 
 			frames ++;
 
@@ -121,10 +142,24 @@ var Stats = function () {
 				fpsMax = Math.max( fpsMax, fps );
 
 				fpsText.textContent = fps + ' FPS (' + fpsMin + '-' + fpsMax + ')';
-				updateGraph( fpsGraph, Math.min( 30, 30 - ( fps / 100 ) * 30 ) );
+				updateGraph( fpsGraph, fps / 100 );
 
 				prevTime = time;
 				frames = 0;
+
+				if ( mem !== undefined ) {
+
+					var heapSize = performance.memory.usedJSHeapSize;
+					var heapSizeLimit = performance.memory.jsHeapSizeLimit;
+
+					mem = Math.round( heapSize * 0.000000954 );
+					memMin = Math.min( memMin, mem );
+					memMax = Math.max( memMax, mem );
+
+					memText.textContent = mem + ' MB (' + memMin + '-' + memMax + ')';
+					updateGraph( memGraph, heapSize / heapSizeLimit );
+
+				}
 
 			}
 
@@ -138,7 +173,7 @@ var Stats = function () {
 
 		}
 
-	}
+	};
 
 };
 
