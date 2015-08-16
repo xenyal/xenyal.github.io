@@ -1,26 +1,9 @@
 var universe = (function() {
 
-    window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
-    window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
-
-    var starDensity = .216;
-    var speedCoeff = .05;
-    var width;
-    var height;
-    var starCount;
-    var circleRadius;
-    var circleCenter;
-    var first = true;
-    var giantColor = '180,184,240';
-    var starColor = '226,225,142';
-    var cometColor = '226,225,224';
-    var canva = document.getElementById('universe');
-    var stars = [];
-
     window.addEventListener('resize', windowResizeHandler, false);
 
     function createUniverse() {
-        universe = canva.getContext('2d');
+        universeCan = canvaUni.getContext('2d');
 
         for (var i = 0; i < starCount; i++) {
             stars[i] = new Star();
@@ -31,7 +14,7 @@ var universe = (function() {
     }
 
     function draw() {
-        universe.clearRect(0, 0, width, height);
+        universeCan.clearRect(0, 0, width, height);
 
         var starsLength = stars.length;
 
@@ -82,28 +65,28 @@ var universe = (function() {
         };
 
         this.draw = function() {
-            universe.beginPath();
+            universeCan.beginPath();
 
             if (this.giant) {
-                universe.fillStyle = 'rgba(' + giantColor + ',' + this.opacity + ')';
-                universe.arc(this.x, this.y, 2, 0, 2 * Math.PI, false);
+                universeCan.fillStyle = 'rgba(' + giantColor + ',' + this.opacity + ')';
+                universeCan.arc(this.x, this.y, 2, 0, 2 * Math.PI, false);
             } else if (this.comet) {
-                universe.fillStyle = 'rgba(' + cometColor + ',' + this.opacity + ')';
-                universe.arc(this.x, this.y, 1.5, 0, 2 * Math.PI, false);
+                universeCan.fillStyle = 'rgba(' + cometColor + ',' + this.opacity + ')';
+                universeCan.arc(this.x, this.y, 1.5, 0, 2 * Math.PI, false);
 
                 //comet tail
                 for (var i = 0; i < 30; i++) {
-                    universe.fillStyle = 'rgba(' + cometColor + ',' + (this.opacity - (this.opacity / 20) * i) + ')';
-                    universe.rect(this.x - this.dx / 4 * i, this.y - this.dy / 4 * i - 2, 2, 2);
-                    universe.fill();
+                    universeCan.fillStyle = 'rgba(' + cometColor + ',' + (this.opacity - (this.opacity / 20) * i) + ')';
+                    universeCan.rect(this.x - this.dx / 4 * i, this.y - this.dy / 4 * i - 2, 2, 2);
+                    universeCan.fill();
                 }
             } else {
-                universe.fillStyle = 'rgba(' + starColor + ',' + this.opacity + ')';
-                universe.rect(this.x, this.y, this.r, this.r);
+                universeCan.fillStyle = 'rgba(' + starColor + ',' + this.opacity + ')';
+                universeCan.rect(this.x, this.y, this.r, this.r);
             }
 
-            universe.closePath();
-            universe.fill();
+            universeCan.closePath();
+            universeCan.fill();
         };
 
         this.move = function() {
