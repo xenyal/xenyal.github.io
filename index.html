@@ -20,7 +20,7 @@
     </head>
 
     <body>
-        <div class="content">
+        <!--<div class="content">
             <div class="random no-select">
                 <span data-number='0' class="nbr ltr no-select">0</span>
                 <span data-number='0' class="nbr ltr no-select">0</span>
@@ -33,7 +33,7 @@
                 <span data-number='0' class="nbr ltr no-select">0</span>
                 <span data-number='0' class="nbr ltr no-select">0</span>
             </div>
-        </div>
+        </div>-->
 
         <canvas id="universe"></canvas>
 
@@ -147,9 +147,9 @@
         </svg>
         <script>
         (function($, Modernizr) {
-            
+
             window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
-            window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+              window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
 
             var starDensity = .216;
             var speedCoeff = .05;
@@ -162,180 +162,139 @@
             var giantColor = '180,184,240';
             var starColor = '226,225,142';
             var cometColor = '226,225,224';
-            var canvaUni = document.getElementById('universe');
+            var canva = document.getElementById('universe');
             var stars = [];
-            var $randomnbr = $('.nbr');
-            var $timer = 10;
-            var $it;
-            var $data = 0;
-            var index;
-            var change;
-            var letters = ["v", "i", "n", "c", "e", "n", "t", "l", "i"];
 
-            createUniverse();
             windowResizeHandler();
-
-            $('.nbr').each(function() {
-
-                change = Math.round(Math.random() * 100);
-                $(this).attr('data-change', change);
-
-            });
-
-
-            function valueNbr() {
-                $('.nbr:nth-child(' + select() + ')').html('' + random() + '');
-                $('.nbr:nth-child(' + select() + ')').attr('data-number', $data);
-                $data++;
-
-                $('.nbr').each(function() {
-                    if (parseInt($(this).attr('data-number')) > parseInt($(this).attr('data-change'))) {
-                        index = $('.ltr').index(this);
-                        $(this).html(letters[index]);
-                        $(this).removeClass('nbr');
-                    }
-                });
-
-            };
-
-            $it = setInterval(valueNbr, $timer);
-
-
-            function getProbability(percents) {
-                return ((Math.floor(Math.random() * 1000) + 1) < percents * 10);
-            }
-
-            function getRandInterval(min, max) {
-                return (Math.random() * (max - min) + min);
-            }
-
-            function windowResizeHandler() {
-                width = window.innerWidth;
-                height = window.innerHeight;
-                starCount = width * starDensity;
-                circleRadius = (width > height ? height / 2 : width / 2);
-                circleCenter = {
-                    x: width / 2,
-                    y: height / 2
-                }
-
-                canvaUni.setAttribute('width', width);
-                canvaUni.setAttribute('height', height);
-            }
-
-            function random() {
-                return Math.round(Math.random() * 9);
-            };
-
-            function select() {
-                return Math.round(Math.random() * $randomnbr.length + 1);
-            };
-
             window.addEventListener('resize', windowResizeHandler, false);
 
+            createUniverse();
+
             function createUniverse() {
-                universe = canvaUni.getContext('2d');
+              universe = canva.getContext('2d');
 
-                for (var i = 0; i < starCount; i++) {
-                    stars[i] = new Star();
-                    stars[i].reset();
-                }
+              for (var i = 0; i < starCount; i++) {
+                stars[i] = new Star();
+                stars[i].reset();
+              }
 
-                draw();
+              draw();
             }
 
             function draw() {
-                universe.clearRect(0, 0, width, height);
+              universe.clearRect(0, 0, width, height);
 
-                var starsLength = stars.length;
+              var starsLength = stars.length;
 
-                for (var i = 0; i < starsLength; i++) {
-                    var star = stars[i];
-                    star.move();
-                    star.fadeIn();
-                    star.fadeOut();
-                    star.draw();
-                }
+              for (var i = 0; i < starsLength; i++) {
+                var star = stars[i];
+                star.move();
+                star.fadeIn();
+                star.fadeOut();
+                star.draw();
+              }
 
-                window.requestAnimationFrame(draw);
+              window.requestAnimationFrame(draw);
             }
 
             function Star() {
 
-                this.reset = function() {
-                    this.giant = getProbability(3);
-                    this.comet = this.giant || first ? false : getProbability(10);
-                    this.x = getRandInterval(0, width - 10);
-                    this.y = getRandInterval(0, height);
-                    this.r = getRandInterval(1.1, 2.6);
-                    this.dx = getRandInterval(speedCoeff, 6 * speedCoeff) + (this.comet + 1 - 1) * speedCoeff * getRandInterval(50, 120) + speedCoeff * 2;
-                    this.dy = -getRandInterval(speedCoeff, 6 * speedCoeff) - (this.comet + 1 - 1) * speedCoeff * getRandInterval(50, 120);
-                    this.fadingOut = null;
-                    this.fadingIn = true;
-                    this.opacity = 0;
-                    this.opacityTresh = getRandInterval(.2, 1 - (this.comet + 1 - 1) * .4);
-                    this.do = getRandInterval(0.0005, 0.002) + (this.comet + 1 - 1) * .001;
-                };
+              this.reset = function() {
+                this.giant = getProbability(3);
+                this.comet = this.giant || first ? false : getProbability(10);
+                this.x = getRandInterval(0, width - 10);
+                this.y = getRandInterval(0, height);
+                this.r = getRandInterval(1.1, 2.6);
+                this.dx = getRandInterval(speedCoeff, 6 * speedCoeff) + (this.comet + 1 - 1) * speedCoeff * getRandInterval(50, 120) + speedCoeff * 2;
+                this.dy = -getRandInterval(speedCoeff, 6 * speedCoeff) - (this.comet + 1 - 1) * speedCoeff * getRandInterval(50, 120);
+                this.fadingOut = null;
+                this.fadingIn = true;
+                this.opacity = 0;
+                this.opacityTresh = getRandInterval(.2, 1 - (this.comet + 1 - 1) * .4);
+                this.do = getRandInterval(0.0005, 0.002) + (this.comet + 1 - 1) * .001;
+              };
 
-                this.fadeIn = function() {
-                    if (this.fadingIn) {
-                        this.fadingIn = this.opacity > this.opacityTresh ? false : true;
-                        this.opacity += this.do;
-                    }
-                };
+              this.fadeIn = function() {
+                if (this.fadingIn) {
+                  this.fadingIn = this.opacity > this.opacityTresh ? false : true;
+                  this.opacity += this.do;
+                }
+              };
 
-                this.fadeOut = function() {
-                    if (this.fadingOut) {
-                        this.fadingOut = this.opacity < 0 ? false : true;
-                        this.opacity -= this.do / 2;
-                        if (this.x > width || this.y < 0) {
-                            this.fadingOut = false;
-                            this.reset();
-                        }
-                    }
-                };
+              this.fadeOut = function() {
+                if (this.fadingOut) {
+                  this.fadingOut = this.opacity < 0 ? false : true;
+                  this.opacity -= this.do / 2;
+                  if (this.x > width || this.y < 0) {
+                    this.fadingOut = false;
+                    this.reset();
+                  }
+                }
+              };
 
-                this.draw = function() {
-                    universe.beginPath();
+              this.draw = function() {
+                universe.beginPath();
 
-                    if (this.giant) {
-                        universe.fillStyle = 'rgba(' + giantColor + ',' + this.opacity + ')';
-                        universe.arc(this.x, this.y, 2, 0, 2 * Math.PI, false);
-                    } else if (this.comet) {
-                        universe.fillStyle = 'rgba(' + cometColor + ',' + this.opacity + ')';
-                        universe.arc(this.x, this.y, 1.5, 0, 2 * Math.PI, false);
+                if (this.giant) {
+                  universe.fillStyle = 'rgba(' + giantColor + ',' + this.opacity + ')';
+                  universe.arc(this.x, this.y, 2, 0, 2 * Math.PI, false);
+                } else if (this.comet) {
+                  universe.fillStyle = 'rgba(' + cometColor + ',' + this.opacity + ')';
+                  universe.arc(this.x, this.y, 1.5, 0, 2 * Math.PI, false);
 
-                        //comet tail
-                        for (var i = 0; i < 30; i++) {
-                            universe.fillStyle = 'rgba(' + cometColor + ',' + (this.opacity - (this.opacity / 20) * i) + ')';
-                            universe.rect(this.x - this.dx / 4 * i, this.y - this.dy / 4 * i - 2, 2, 2);
-                            universe.fill();
-                        }
-                    } else {
-                        universe.fillStyle = 'rgba(' + starColor + ',' + this.opacity + ')';
-                        universe.rect(this.x, this.y, this.r, this.r);
-                    }
-
-                    universe.closePath();
+                  //comet tail
+                  for (var i = 0; i < 30; i++) {
+                    universe.fillStyle = 'rgba(' + cometColor + ',' + (this.opacity - (this.opacity / 20) * i) + ')';
+                    universe.rect(this.x - this.dx / 4 * i, this.y - this.dy / 4 * i - 2, 2, 2);
                     universe.fill();
-                };
+                  }
+                } else {
+                  universe.fillStyle = 'rgba(' + starColor + ',' + this.opacity + ')';
+                  universe.rect(this.x, this.y, this.r, this.r);
+                }
 
-                this.move = function() {
-                    this.x += this.dx;
-                    this.y += this.dy;
-                    if (this.fadingOut === false) {
-                        this.reset();
-                    }
-                    if (this.x > width - (width / 4) || this.y < 0) {
-                        this.fadingOut = true;
-                    }
-                };
+                universe.closePath();
+                universe.fill();
+              };
 
-                (function() {
-                    setTimeout(function() {
-                        first = false;
-                    }, 50)
-                })()
+              this.move = function() {
+                this.x += this.dx;
+                this.y += this.dy;
+                if (this.fadingOut === false) {
+                  this.reset();
+                }
+                if (this.x > width - (width / 4) || this.y < 0) {
+                  this.fadingOut = true;
+                }
+              };
+
+              (function() {
+                setTimeout(function() {
+                  first = false;
+                }, 50)
+              })()
+            }
+
+            function getProbability(percents) {
+              return ((Math.floor(Math.random() * 1000) + 1) < percents * 10);
+            }
+
+            function getRandInterval(min, max) {
+              return (Math.random() * (max - min) + min);
+            }
+
+            function windowResizeHandler() {
+              width = window.innerWidth;
+              height = window.innerHeight;
+              starCount = width * starDensity;
+              circleRadius = (width > height ? height / 2 : width / 2);
+              circleCenter = {
+                x: width / 2,
+                y: height / 2
+              }
+
+              canva.setAttribute('width', width);
+              canva.setAttribute('height', height);
             }
 
         }(jQuery, Modernizr));    
