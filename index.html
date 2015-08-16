@@ -170,7 +170,7 @@
         var canva = document.getElementById('universe');
         var stars = [];
         var stats = new Stats();
-        
+
         stats.setMode(1); // 0: fps, 1: ms
 
         stats.domElement.style.position = 'absolute';
@@ -212,7 +212,7 @@
 
             window.requestAnimationFrame(draw);
 
-            stat.end();
+            stats.end();
         }
 
         function Star() {
