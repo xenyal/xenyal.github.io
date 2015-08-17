@@ -93,11 +93,10 @@ span.subbanner {
   position: absolute;
   border: none;
   top: 53.5%;
-  left: 63%;
-  width: 450px;
+  left: 48.5%;
+  width: 650px;
   color: #eee;
-  background: #eee;
-  background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#eee), to(#020409));
+  background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#eee), to(#1F254D));
   height: 1px;
 }
 
