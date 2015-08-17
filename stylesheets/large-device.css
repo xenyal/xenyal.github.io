@@ -57,7 +57,7 @@ body {
   display: inline-block;
 }
 
-.subbanner {
+.container .section .content span.subbanner {
   top: 52.5% !important;
   left: 68% !important;
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif !important;
