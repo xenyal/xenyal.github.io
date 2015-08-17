@@ -65,9 +65,9 @@ span.subbanner {
   text-transform: initial;
 }
 
-hr .bannerline {
+.bannerline {
   position: absolute;
-  top: 52.5%;
+  top: 53.5%;
   left: 63%;
   width: 250px;
   color: #eee;
