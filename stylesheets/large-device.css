@@ -66,6 +66,7 @@ body {
   font-weight: 100;
   background-color: rgba(0, 0, 0, 0);
   color: #eee;
+  display: inline-block;
 }
 
 .namebanner span {
