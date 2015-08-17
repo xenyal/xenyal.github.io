@@ -85,8 +85,8 @@ span.subbanner {
   top: 52.5% !important;
   left: 69% !important;
   font-family: Bitter-Regular!important;
-  font-size: 1.6em !important;
-  text-transform: initial;
+  font-size: 1.25em !important;
+  text-transform: uppercase;
 }
 
 .bannerline {
