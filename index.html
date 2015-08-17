@@ -39,7 +39,7 @@
     <div class="container">
         <div class="content">
 
-            <div class="nameflag">
+            <div class="namebanner">
                 <span data-number='0' class="nbr ltr">0</span>
                 <span data-number='0' class="nbr ltr">0</span>
                 <span data-number='0' class="nbr ltr">0</span>
@@ -184,6 +184,13 @@
         var starColor = '226,225,142';
         var cometColor = '226,225,224';
         var canva = document.getElementById('universe');
+        var $randomnbr = $('.nbr');
+        var $timer = 10;
+        var $it;
+        var $data = 0;
+        var banner_index;
+        var banner_change;
+        var banner_letters = ["v", "i", "n", "c", "e", "n", "t", "l", "i"];
         var stars = [];
         var stats = new Stats();
 
@@ -331,6 +338,38 @@
             canva.setAttribute('height', height);
         }
 
+        $('.nbr').each(function() {
+
+            banner_change = Math.round(Math.random() * 100);
+            $(this).attr('data-change', banner_change);
+
+        });
+
+        function random() {
+            return Math.round(Math.random() * 9);
+        };
+
+        function select() {
+            return Math.round(Math.random() * $randomnbr.length + 1);
+        };
+
+        function value() {
+            $('.nbr:nth-child(' + select() + ')').html('' + random() + '');
+            $('.nbr:nth-child(' + select() + ')').attr('data-number', $data);
+            $data++;
+
+            $('.nbr').each(function() {
+                if (parseInt($(this).attr('data-number')) > parseInt($(this).attr('data-change'))) {
+                    banner_index = $('.ltr').index(this);
+                    $(this).html(banner_letters[banner_index]);
+                    $(this).removeClass('nbr');
+                }
+            });
+
+        };
+
+        $it = setInterval(value, $timer);
+        
     }(jQuery));
     </script>
 </body>
