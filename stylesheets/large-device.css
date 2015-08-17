@@ -57,13 +57,21 @@ body {
   display: inline-block;
 }
 
-.container .section .content span.subbanner {
+span.subbanner {
   top: 52.5% !important;
   left: 68% !important;
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif !important;
   font-size: 1.6em !important;
-  text-transform: initial;
-  display: hidden !important;
+  text-transform: initial;;
+}
+
+hr .bannerline {
+  top: 53.5%;
+  left: 66%;
+  width: 250px;
+  color: #fff;
+  background-color: #fff;
+  height: 1.25em;
 }
 
 #universe {
