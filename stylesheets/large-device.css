@@ -63,7 +63,7 @@ body {
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif !important;
   font-size: 1.6em !important;
   text-transform: initial;
-  display: inline-block;
+  display: hidden !important;
 }
 
 #universe {
