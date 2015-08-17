@@ -95,7 +95,7 @@ span.subbanner {
   left: 63%;
   width: 250px;
   color: #eee;
-  background-color: #eee;
+  background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#fff), to(#020409));
   height: 1px;
 }
 
