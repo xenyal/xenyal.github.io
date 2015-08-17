@@ -62,7 +62,7 @@ body {
   left: 64% !important;
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif !important;
   font-size: 1.8em !important;
-  text-transform: default;
+  text-transform: initial;
 }
 
 #universe {
