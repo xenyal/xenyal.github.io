@@ -58,8 +58,9 @@ body {
 }
 
 .subbanner {
-  top: 54% !important;
-  left: 62% !important;
+  top: 55% !important;
+  left: 64% !important;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif !important;
   font-size: 1.8em !important;
   text-transform: default;
 }
