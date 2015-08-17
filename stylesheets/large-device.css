@@ -15,7 +15,7 @@
 }
 
 @font-face {
-  font-family: Raleway-Regular;
+  font-family: 'Raleway-Regular';
   src: url('stylesheets/fonts/raleway/Raleway-Regular.ttf') format('truetype'),
       url('stylesheets/fonts/raleway/Raleway-Regular.woff') format('woff');
   font-weight: normal;
