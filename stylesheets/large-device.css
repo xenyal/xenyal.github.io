@@ -66,12 +66,12 @@ span.subbanner {
 }
 
 hr .bannerline {
-  top: 53.5%;
-  left: 66%;
+  top: 52%;
+  left: 63%;
   width: 250px;
   color: #fff;
   background-color: #fff;
-  height: 1.25em;
+  height: 1px;
 }
 
 #universe {
