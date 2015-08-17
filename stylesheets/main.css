@@ -28,8 +28,9 @@ body {
 
 .namebanner {
   text-align: center;
-  position: relative;
+  position: absolute;
   top: 50%;
+  left: 47%;
   -ms-transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -37,7 +38,7 @@ body {
   font-size: 16px;
   text-transform: uppercase;
   font-weight: 100;
-  background-color: #222;
+  background-color: rgba(0, 0, 0, 0);
   color: #eee;
 }
 
