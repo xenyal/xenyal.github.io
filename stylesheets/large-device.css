@@ -1,23 +1,23 @@
 @font-face {
-  font-family: Bitter-Regular;
-  src: url(stylesheets/fonts/bitter/Bitter-Regular.ttf) format('truetype'),
-    url(stylesheets/fonts/bitter/Bitter-Regular.woff) format('woff');
+  font-family: 'Bitter-Regular';
+  src: url('stylesheets/fonts/bitter/Bitter-Regular.ttf') format('truetype'),
+    url('stylesheets/fonts/bitter/Bitter-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: Raleway-Light;
-  src: url(stylesheets/fonts/raleway/Raleway-Light.ttf) format('truetype'),
-      url(stylesheets/fonts/raleway/Raleway-Light.woff) format('woff');
+  font-family: 'Raleway-Light';
+  src: url('stylesheets/fonts/raleway/Raleway-Light.ttf') format('truetype'),
+      url('stylesheets/fonts/raleway/Raleway-Light.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: Raleway-Regular;
-  src: url(stylesheets/fonts/raleway/Raleway-Regular.ttf) format('truetype'),
-      url(stylesheets/fonts/raleway/Raleway-Regular.woff) format('woff');
+  src: url('stylesheets/fonts/raleway/Raleway-Regular.ttf') format('truetype'),
+      url('stylesheets/fonts/raleway/Raleway-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -68,7 +68,7 @@ body {
   -ms-transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
-  font-family: Raleway-Regular;
+  font-family: 'Raleway-Regular';
   font-size: 2.2em;
   text-transform: uppercase;
   font-weight: 100;
@@ -84,7 +84,7 @@ body {
 span.subbanner {
   top: 52.5% !important;
   left: 69% !important;
-  font-family: Bitter-Regular!important;
+  font-family: 'Bitter-Regular' !important;
   font-size: 1.25em !important;
   text-transform: uppercase;
 }
