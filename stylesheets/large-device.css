@@ -68,7 +68,7 @@ body {
   -ms-transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
-  font-family: 'Raleway-Regular';
+  font-family: 'Raleway-Regular', sans-serif;
   font-size: 2.2em;
   text-transform: uppercase;
   font-weight: 100;
@@ -84,7 +84,7 @@ body {
 span.subbanner {
   top: 52.5% !important;
   left: 69% !important;
-  font-family: 'Bitter-Regular' !important;
+  font-family: 'Bitter-Regular', serif !important;
   font-size: 1.25em !important;
   text-transform: uppercase;
 }
