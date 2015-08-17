@@ -3,7 +3,7 @@
 	"orientation": "landscape",
 	"icons": [
 		{
-			"src": "",
+			"src": "images/black-icon-v.png",
 			"sizes": "48x48",
 			"type": "image/webp"
 		}
