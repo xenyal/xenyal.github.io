@@ -62,15 +62,16 @@ span.subbanner {
   left: 69% !important;
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif !important;
   font-size: 1.6em !important;
-  text-transform: initial;;
+  text-transform: initial;
 }
 
 hr .bannerline {
+  position: absolute;
   top: 52.5%;
   left: 63%;
   width: 250px;
-  color: #fff;
-  background-color: #fff;
+  color: #eee;
+  background-color: #eee;
   height: 1px;
 }
 
