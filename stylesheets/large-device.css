@@ -65,7 +65,7 @@ body {
   cursor: default;
 }
 
-.banner {
+div.banner {
   position: relative;
   height: 100%;
   width: 40%;
@@ -73,7 +73,28 @@ body {
   left: 60%;
 }
 
-.namebanner {
+div.banner span.subbanner {
+  position: absolute;
+  left: 35%;
+  color: #eee;
+  font-family: 'Bitter-Regular';
+  font-size: 1.1em !important;
+  text-transform: uppercase;
+  letter-spacing: 2.4px;
+}
+
+div.banner .bannerline {
+  position: absolute;
+  left: -13%;
+  top: 4%;
+  border: none;
+  width: 650px;
+  background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#eee), to(#1F254D));
+  height: 1px;
+  color: #eee;
+}
+
+div.banner .namebanner {
   text-align: center;
   position: absolute;
   top: 7%;
@@ -86,30 +107,9 @@ body {
   color: #eee;
 }
 
-.namebanner span {
+div.banner .namebanner span {
   width: 30px;
   display: inline-block;
-}
-
-span.subbanner {
-  position: absolute;
-  left: 35%;
-  color: #eee;
-  font-family: 'Bitter-Regular';
-  font-size: 1.1em !important;
-  text-transform: uppercase;
-  letter-spacing: 2.4px;
-}
-
-.bannerline {
-  position: absolute;
-  left: -13%;
-  top: 4%;
-  border: none;
-  width: 650px;
-  background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#eee), to(#1F254D));
-  height: 1px;
-  color: #eee;
 }
 
 #universe {
