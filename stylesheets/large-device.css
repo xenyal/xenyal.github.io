@@ -92,6 +92,11 @@ span.subbanner {
   font-family: 'Bitter-Regular';
   font-size: 1.1em !important;
   text-transform: uppercase;
+  transform: scale(1,1.5);
+  -webkit-transform: scale(1,1.5); /* Safari and Chrome */
+  -moz-transform: scale(1,1.5); /* Firefox */
+  -ms-transform: scale(1,1.5); /* IE 9+ */
+  -o-transform: scale(1,1.5); /* Opera */
 }
 
 .bannerline {
