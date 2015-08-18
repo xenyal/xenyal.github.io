@@ -74,7 +74,7 @@
 
         this.reset = function() {
             this.giant = getProbability(3);
-            this.comet = this.giant || first ? false : getProbability(20);
+            this.comet = this.giant || first ? false : getProbability(16);
             this.x = getRandInterval(0, width - 10);
             this.y = getRandInterval(0, height);
             this.r = getRandInterval(1.1, 2.6);
