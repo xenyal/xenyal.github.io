@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/jquery.fullPage.css">
+
+    <script type="text/javascript" src="javascripts/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/jquery.fullPage.min.js"></script>
+
+	<script type="text/javascript">
+
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				/*sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],*/
+				anchors: ['pageone', 'pagetwo', 'pagethree', 'pagefour'],
+				scrollingSpeed: 1000
+			});
+		});
+
+	</script>
+
+</head>
+
+<body>
+
+	<div id="fullpage">
+		<div class="section" >Section 1</div>
+		<div class="section" >Section 2</div>
+		<div class="section" >Section 3</div>
+		<div class="section" >Section 4</div>
+	</div>
+
+</body>
+
+</html>
