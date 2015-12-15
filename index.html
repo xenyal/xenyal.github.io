@@ -13,7 +13,12 @@
     <link rel="manifest" media="only screen and (max-device-width: 480px)" href="manifest.json">
     <link rel="shortcut icon" href="images/black-icon-v.ico">
 
-    <link rel="stylesheet" type="text/css" href="stylesheets/jquery.fullPage.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/reset.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Playfair+Display|Lato">
+    
+    <!--<link rel="stylesheet" type="text/css" href="stylesheets/jquery.fullPage.css">-->
+    <link rel="stylesheet" type="text/css" href="stylesheets/temp.css">
     <link rel="stylesheet" type="text/css" media="only screen and (min-device-width: 924px)" href="stylesheets/large-device.css">
     <!--<link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 924px) and (min-device-width: 481px)" href="stylesheets/medium-device.css">-->
     <!--<link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 480px)" href="stylesheets/small-device.css">-->
@@ -26,80 +31,45 @@
 
         ga('create', 'UA-51046714-2', 'auto');
         ga('send', 'pageview');
-
-/*
-    (function(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga', a, m) {
-
-        window['GoogleAnalyticsObject'] = 'ga';
-
-        window['ga'] = window['ga'] || function() {
-            (window['ga'].q = window['ga'].q || []).push(arguments)
-        }, window['ga'].l = 1 * new Date();
-
-        a = document.createElement('script'),
-        m = document.getElementsByTagName('script')[0];
-
-        a.async = 1; // script element attr async set to true
-
-        a.src = '//www.google-analytics.com/analytics.js'; // script element src now has url
-
-        m.parentNode.insertBefore(a, m)
-
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-
-    ga('create', 'UA-51046714-2', 'auto');
-    ga('send', 'pageview');
-*/
-
     </script>
 
     <script type="text/javascript" src="javascripts/jquery.min.js"></script>
-    <script type="text/javascript" src="javascripts/jquery.fullPage.min.js"></script>
+    <!--<script type="text/javascript" src="javascripts/jquery.fullPage.min.js"></script>-->
     <script type="text/javascript" src="javascripts/Stats.js"></script>
 
     <!--[if lt IE 9]>   
         <script src="javascripts/html5shiv.js"></script>
     <![endif]-->
 
-    <script>
+    <!--<script>
         $(document).ready(function() {
             $('#fullpage').fullpage({
                 anchors: ['home', 'intro', 'experience', 'work', 'projects', 'contact'],
                 scrollingSpeed: 1000
             });
         });
-    </script>
+    </script>-->
 
 </head>
 
 <body>
 
-    <div class="container" id="fullpage">
+    <div class="introContainer" id="fullpage">
         <div class="section">
             <div class="content">
 
-                <div class="banner">
-                    <span class="subbanner cursordefault">I am</span>
-                    <hr class="bannerline cursordefault">
-                    <div class="namebanner cursordefault">
-                        <span data-number='0' class="nbr ltr">0</span>
-                        <span data-number='0' class="nbr ltr">0</span>
-                        <span data-number='0' class="nbr ltr">0</span>
-                        <span data-number='0' class="nbr ltr">0</span>
-                        <span data-number='0' class="nbr ltr">0</span>
-                        <span data-number='0' class="nbr ltr">0</span>
-                        <span data-number='0' class="nbr ltr">0</span>
-                        <span class="space"></span>
-                        <span data-number='0' class="nbr ltr">0</span>
-                        <span data-number='0' class="nbr ltr">0</span>
+                <div class="gm-intro">
+                    <div id="welcometo">
+                        <div>Hello! I am</div>
+                        <div class="smallsep"></div>
                     </div>
+                    <h1>Vincent Li</h1>
+                    <h2>A Canadian web developer from Waterloo</h2>
                 </div>
-
                 
                 <canvas id="universe"></canvas>
 
-                <div id="footer">
+                <div id="svgbase">
                     <svg id="scene" x="0px" y="0px" width="1600px" height="315px">  
                         <path id="ground" d="M0,316.4209c0,0,157.7119-35.416,469-56c7.3833-0.4883,23.7876-3.5488,31.3335-4.0166
                         c3.7681-0.2334,19.4302,0.9424,28.3335,0.3506c17.1494-1.1396,30.9072-4.2734,38.333-4.6836
@@ -166,11 +136,6 @@
                         </g>
                     </svg>
                 </div>
-            </div>
-        </div>
-        <div class="section">
-            <div class="content">
-                <img src="images/out.png" height="100%" width="100%">
             </div>
         </div>
     </div>

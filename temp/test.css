@@ -1,0 +1,65 @@
+html,
+body {
+  font-family: Lato, sans-serif;
+  position: relative;
+  height: 100%;
+}
+
+.gm-intro {
+  width: 720px;
+  margin-left: -360px;
+  color: #000;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -125px;
+  z-index: 10;
+}
+
+.gm-intro #welcometo {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-size: 33px;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: -1px;
+  color: #a7a7a7;
+  display: inline-block;
+  text-align: center;
+}
+
+.gm-intro #welcometo .smallsep {
+  background: #a7a7a7;
+  height: 2px;
+  width: 50px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  opacity: 0.3;
+}
+
+.gm-intro h1 {
+  font-size: 80px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 0.85;
+  margin-bottom: 28px;
+}
+
+@media only screen and (max-height: 700px) {
+  .gm-intro h1 {
+    font-size: 80px;
+  }
+}
+@media only screen and (min-width: 1180px) and (max-width: 1280px) {
+  .gm-intro h1 {
+    font-size: 80px;
+  }
+}
+.gm-intro h2 {
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-top: 50px;
+}
