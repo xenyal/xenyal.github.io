@@ -1,6 +1,7 @@
 html,
 body {
   /* still need to add consistent styles across the site*/
+  overflow: hidden;
 }
 .gm-intro {
     min-width: 770px;
