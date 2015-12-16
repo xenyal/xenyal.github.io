@@ -1,0 +1,93 @@
+html,
+body {
+  /* still need to add consistent styles across the site*/
+}
+.gm-intro {
+    width: 720px;
+    margin-left: -360px;
+    color: #eaeaea;
+    text-align: center;
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    margin-top: -125px;
+    z-index: 10;
+    text-shadow: #dee7e7 0 0 .12em;
+    box-sizing: border-box;
+    border: 14px solid #eaeaea;
+    padding: 3em 4em 3em 4em
+}
+.gm-intro #welcometo {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-size: 33px;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: -1px;
+    color: #c1c1c1;
+    display: inline-block;
+    text-align: center
+}
+.gm-intro #welcometo .smallsep {
+    background: #dbdbdb;
+    height: 2px;
+    width: 50px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    opacity: .3
+}
+.gm-intro h1 {
+    font-size: 80px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: .85;
+    margin-bottom: 28px;
+    margin-top: 0
+}
+@media only screen and (max-height: 700px) {
+    .gm-intro h1 {
+        font-size: 80px
+    }
+}
+@media only screen and (min-width: 1180px) and (max-width: 1280px) {
+    .gm-intro h1 {
+        font-size: 80px
+    }
+}
+.gm-intro h2 {
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-top: 50px
+}
+.introContainer {
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(1600px at 70% 120%, rgba(33, 39, 80, 1) 10%, #020409 100%)
+}
+.cursordefault {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default
+}
+#universe {
+    width: 100%;
+    height: 100%
+}
+#svgbase {
+    position: absolute;
+    bottom: 0;
+    height: 300px;
+    width: 100%
+}
+#scene {
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    margin-left: -800px
+}
