@@ -1,11 +1,15 @@
 html,
 body {
-  /* still need to add consistent styles across the site*/
-  overflow: hidden;
+    /* still need to add consistent styles across the site*/
+    
+    overflow: hidden;
+    background-color: #0E1225;
+    animation: onload-fadein 1s;
 }
 .gm-intro {
-    min-width: 770px;
-    color: #eaeaea;
+    width: 795px;
+    height: 300px;
+    color: #EAEAEA;
     text-align: center;
     position: absolute;
     left: 50%;
@@ -13,24 +17,25 @@ body {
     transform: translate(-50%, -50%);
     white-space: nowrap;
     overflow: hidden;
-    text-shadow: #DEE7E7 0 0 .12em;
+    text-shadow: #DEE7E7 0 0 .1em;
     box-sizing: border-box;
-    /*border: 1px solid #FFFFFF;*/
-    padding: 4em 8em 4.5em 8em;
-    animation: onloadfadein 3s;
+    padding: 2.7em 8em 4.5em 8em;
+    animation: onload-fadein 3s ease-in;
+    background: rgba(60, 122, 137, .8);
 }
+
 .gm-intro #welcometo {
     font-family: "Playfair Display", Georgia, "Times New Roman", serif;
     font-size: 33px;
     font-weight: 400;
     font-style: italic;
     letter-spacing: -1px;
-    color: #c1c1c1;
+    color: #C1C1C1;
     display: inline-block;
     text-align: center
 }
 .gm-intro #welcometo .smallsep {
-    background: #dbdbdb;
+    background: #DBDBDB;
     height: 2px;
     width: 50px;
     margin: auto;
@@ -70,7 +75,9 @@ body {
     transform: translate(-50%, -50%);
     stroke-dasharray: 2379;
     stroke-dashoffset: 2379;
-    animation: drawframe 2.5s ease-in-out forwards;
+    animation: 
+        onload-drawframe 2.5s ease-in-out forwards, 
+        onload-expand 2.5s ease-in forwards;
 }
 .introContainer {
     width: 100%;
@@ -92,7 +99,9 @@ body {
 }
 #svgbase {
     position: absolute;
-    bottom: -8px; /* not sure why 0px makes it float slightly above the bottom */
+    bottom: -8px;
+    /* not sure why 0px makes it float slightly above the bottom */
+    
     height: 300px;
     width: 100%
 }
@@ -102,22 +111,146 @@ body {
     left: 50%;
     margin-left: -800px
 }
-@keyframes drawframe {
+.scrolldown-container .scrolldown-btn {
+    width: 20px;
+    height: 40px;
+    position: absolute;
+    left: 50%;
+    /*bottom: 25%;*/
+    text-align: center;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    animation: 
+        onload-fadein 4.8s ease-in forwards,
+        from-above 4.8s forwards;
+}
+.scrolldown-container .scrolldown-btn svg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+.scrolldown-container .scrolldown-btn svg path.first-path {
+    animation: scrollanim 1s ease-in-out infinite;
+    animation-delay: 0.8s;
+}
+.scrolldown-container .scrolldown-btn svg path.second-path {
+    animation: scrollanim 2 1s ease-in-out infinite;
+}
+@keyframes onload-drawframe {
     to {
-      stroke-dashoffset: 0;
+        stroke-dashoffset: 0;
     }
 }
-@keyframes onloadfadein {
+@keyframes onload-fadein {
     0% {
-      opacity: 0;
+        opacity: 0;
     }
     50% {
-      opacity: 0;
+        opacity: 0;
     }
     75% {
-      opacity: 0.5;
+        opacity: 0.5;
     }
     100% {
-      opacity: 1;
+        opacity: 1;
+    }
+}
+@keyframes from-above {
+    0% {
+        bottom: 28%;
+    }
+    100% {
+        bottom: 25%;
+    }
+}
+@keyframes onload-expand {
+    89.2% {
+        width: 795px;
+        height: 300px;
+    }
+    100% {
+        width: 845px;
+        height: 345px;
+    }
+}
+@-webkit-keyframes scrollanim {
+    0% {
+        -webkit-transform: translate(0, -40px);
+        opacity: 0;
+    }
+    60% {
+        -webkit-transform: translate(0, 0);
+        opacity: 0.8;
+    }
+}
+@-moz-keyframes scrollanim {
+    0% {
+        -moz-transform: translate(0, -40px);
+        opacity: 0;
+    }
+    60% {
+        -moz-transform: translate(0, 0);
+        opacity: 0.8;
+    }
+}
+@keyframes scrollanim {
+    0% {
+        -webkit-transform: translate(0, -40px);
+        -moz-transform: translate(0, -40px);
+        -ms-transform: translate(0, -40px);
+        -o-transform: translate(0, -40px);
+        transform: translate(0, -40px);
+        opacity: 0;
+    }
+    60% {
+        -webkit-transform: translate(0, 0);
+        -moz-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        -o-transform: translate(0, 0);
+        transform: translate(0, 0);
+        opacity: 0.8;
+    }
+}
+@-webkit-keyframes scrollanim2 {
+    0% {
+        -webkit-transform: translate(0, -40px);
+        opacity: 0;
+    }
+    60% {
+        -webkit-transform: translate(0, 0px);
+        opacity: 0.6;
+    }
+}
+@-moz-keyframes scrollanim2 {
+    0% {
+        -moz-transform: translate(0, -40px);
+        opacity: 0;
+    }
+    60% {
+        -moz-transform: translate(0, 0px);
+        opacity: 0.6;
+    }
+}
+@keyframes scrollanim2 {
+    0% {
+        -webkit-transform: translate(0, -40px);
+        -moz-transform: translate(0, -40px);
+        -ms-transform: translate(0, -40px);
+        -o-transform: translate(0, -40px);
+        transform: translate(0, -40px);
+        opacity: 0;
+    }
+    60% {
+        -webkit-transform: translate(0, 0px);
+        -moz-transform: translate(0, 0px);
+        -ms-transform: translate(0, 0px);
+        -o-transform: translate(0, 0px);
+        transform: translate(0, 0px);
+        opacity: 0.6;
     }
 }
