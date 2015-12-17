@@ -4,12 +4,14 @@ body {
     
     overflow: hidden;
     background-color: #0E1225;
-    animation: onload-fadein 1s;
+    opacity: 0;
+    animation: onload-fadein 1s ease-in forwards;
 }
 .gm-intro {
     width: 795px;
     height: 300px;
     color: #EAEAEA;
+    opacity: 0;
     text-align: center;
     position: absolute;
     left: 50%;
@@ -20,7 +22,8 @@ body {
     text-shadow: #DEE7E7 0 0 .1em;
     box-sizing: border-box;
     padding: 2.7em 8em 4.5em 8em;
-    animation: onload-fadein 3s ease-in;
+    animation: onload-fadein 1s ease-in forwards;
+    animation-delay: 1.5s;
     background: rgba(60, 122, 137, .8);
 }
 
@@ -116,7 +119,7 @@ body {
     height: 40px;
     position: absolute;
     left: 50%;
-    /*bottom: 25%;*/
+    opacity: 0;
     text-align: center;
     -webkit-transform: translateX(-50%) translateY(-50%);
     -moz-transform: translateX(-50%) translateY(-50%);
@@ -147,12 +150,6 @@ body {
     }
 }
 @keyframes onload-fadein {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 0;
-    }
     75% {
         opacity: 0.5;
     }
