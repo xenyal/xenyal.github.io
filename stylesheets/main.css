@@ -59,7 +59,7 @@ body {
         font-size: 80px
     }
     .scrolldown-container .scrolldown-btn {
-        display: hidden;
+        display: none;
     }
 }
 @media only screen and (min-width: 1180px) and (max-width: 1280px) {
