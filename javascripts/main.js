@@ -1,7 +1,7 @@
 (function($) {
 
     window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
-        window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+                                   window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
 
     /*    Global vars    */
     var starDensity = .216;
@@ -16,18 +16,12 @@
     var starColor = '226,225,142';
     var cometColor = '226,225,224';
     var canva = document.getElementById('universe');
-    var $randomnbr = $('.nbr');
-    var $timer = 10;
-    var $it;
-    var $data = 0;
-    var banner_index;
-    var banner_change;
-    var banner_letters = ["v", "i", "n", "c", "e", "n", "t", "l", "i"];
     var stars = [];
+    
+    /*     Stats.js component for stars canvas    */
     var stats = new Stats();
 
-    /*     Stats.js component     */
-    stats.setMode(0); // 0: fps, 1: ms
+    stats.setMode(0); // defaults - 0: fps, 1: ms
     stats.domElement.style.position = 'absolute';
     stats.domElement.style.left = '0px';
     stats.domElement.style.top = '0px';
@@ -169,37 +163,5 @@
         canva.setAttribute('width', width);
         canva.setAttribute('height', height);
     }
-
-    $('.nbr').each(function() {
-
-        banner_change = Math.round(Math.random() * 100);
-        $(this).attr('data-change', banner_change);
-
-    });
-
-    function random() {
-        return Math.round(Math.random() * 9);
-    };
-
-    function select() {
-        return Math.round(Math.random() * $randomnbr.length + 1);
-    };
-
-    function value() {
-        $('.nbr:nth-child(' + select() + ')').html('' + random() + '');
-        $('.nbr:nth-child(' + select() + ')').attr('data-number', $data);
-        $data++;
-
-        $('.nbr').each(function() {
-            if (parseInt($(this).attr('data-number')) > parseInt($(this).attr('data-change'))) {
-                banner_index = $('.ltr').index(this);
-                $(this).html(banner_letters[banner_index]);
-                $(this).removeClass('nbr');
-            }
-        });
-
-    };
-
-    $it = setInterval(value, $timer);
         
 }(jQuery));
