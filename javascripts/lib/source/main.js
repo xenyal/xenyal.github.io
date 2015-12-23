@@ -1,4 +1,4 @@
-$(document).ready(function($) {
+(function() {
 
     window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
                                    window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
@@ -164,4 +164,4 @@ $(document).ready(function($) {
         canva.setAttribute('height', height);
     }
         
-});
+})();
