@@ -3,7 +3,7 @@ body {
     /* still need to add consistent styles across the site*/
     
     overflow: hidden;
-    background-color: #0E1225;
+    background-image: radial-gradient(1600px at 70% 120%, rgba(33, 39, 80, 1) 10%, #020409 100%);
     opacity: 0;
     animation: onload-fadein 1s ease-in forwards;
 }
