@@ -21,7 +21,7 @@ body {
     overflow: hidden;
     text-shadow: #DEE7E7 0 0 .1em;
     box-sizing: border-box;
-    padding: 2.7em 8em 4.5em 8em;
+    padding: 2.5em 8em 4.5em 8em;
     animation: onload-fadein 1s ease-in forwards;
     animation-delay: 1.5s;
     background: rgba(60, 122, 137, .8);
@@ -54,9 +54,12 @@ body {
     margin-bottom: 28px;
     margin-top: 0
 }
-@media only screen and (max-height: 700px) {
+@media only screen and (max-height: 1000px) {
     .gm-intro h1 {
         font-size: 80px
+    }
+    .scrolldown-container .scrolldown-btn {
+        display: none;
     }
 }
 @media only screen and (min-width: 1180px) and (max-width: 1280px) {
@@ -69,7 +72,7 @@ body {
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 5px;
-    margin-top: 50px
+    margin-top: 40px
 }
 .gm-intro-border {
     position: absolute;
@@ -81,11 +84,6 @@ body {
     animation: 
         onload-drawframe 2.5s ease-in-out forwards, 
         onload-expand 2.5s ease-in forwards;
-}
-.introContainer {
-    width: 100%;
-    height: 100%;
-    background-image: radial-gradient(1600px at 70% 120%, rgba(33, 39, 80, 1) 10%, #020409 100%)
 }
 .nocursor {
     -webkit-touch-callout: none;
@@ -250,4 +248,21 @@ body {
         transform: translate(0, 0px);
         opacity: 0.6;
     }
+}
+section .intro {
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(1600px at 70% 120%, rgba(33, 39, 80, 1) 10%, #020409 100%)
+}
+section .about {
+
+}
+section .experience {
+
+}
+section .employment {
+
+}
+section .contact {
+
 }
