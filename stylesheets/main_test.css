@@ -1,0 +1,25 @@
+body {	
+	margin: 40px auto;
+	max-width: 650px;
+	line-height: 1.6;
+	font-size: 18px;
+	color: #444;
+}
+
+section {
+	border-bottom: 1px black solid;
+	padding-top: 1em;
+}
+
+.svgbase {
+    height: 0;             /* collapse the container's height */
+    width: 50%;    /* specify any width you want (a percentage value, basically) */
+    /* apply a padding using the following formula */
+    /* this formula makes sure the aspect ratio of the container equals that of the svg graphic */
+    margin: 0 auto;
+    padding-top: 26.86%;
+   	background-image: url(../images/boy_bg.svg);
+   	background-size: cover;
+   	background-repeat: no-repeat;
+}
+

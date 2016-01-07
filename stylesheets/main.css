@@ -249,13 +249,18 @@ body {
         opacity: 0.6;
     }
 }
-section .intro {
+section {
+    height: 768px;
     width: 100%;
-    height: 100%;
+}
+section .intro {
     background-image: radial-gradient(1600px at 70% 120%, rgba(33, 39, 80, 1) 10%, #020409 100%)
 }
 section .about {
-
+    position: absolute;
+    background-color: rgb(60, 120, 150);
+    padding: 0 1em;
+    font-size: 4em;
 }
 section .experience {
 

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Vincent Li is a Canadian software developer that specializes in
+    front-end development. He can be found on GitHub and StackOverflow." />
+
+        <title>Home | Vincent Li</title>
+
+    <link rel="manifest" media="only screen and (max-device-width: 480px)" href="manifest.json">
+    <link rel="shortcut icon" href="images/black-icon-v.ico">
+
+    <!--<link rel="stylesheet" type="text/css" href="stylesheets/reset.css">-->
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css">
+
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Playfair+Display|Lato">
+    <link rel="stylesheet" type="text/css" href="stylesheets/main_test.css">
+    <!-- <link rel="stylesheet" type="text/css" href="stylesheets/fontawesome.css"> -->
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-51046714-2', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <script type="text/javascript" src="javascripts/lib/dep/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/lib/dep/Stats.js"></script>
+
+    <!--[if lt IE 9]>   
+        <script src="javascripts/html5shiv.js"></script>
+    <![endif]-->
+
+    <!--<script>
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                anchors: ['home', 'intro', 'experience', 'work', 'projects', 'contact'],
+                scrollingSpeed: 1000
+            });
+        });
+    </script>-->
+
+</head>
+
+<body>
+
+    <div id="fullpage">
+
+        <section class="intro">
+            <div class="content">
+
+                <!-- header text -->
+                <div class="gm-intro nocursor">
+                    <div id="welcometo">
+                        <div>Hello! I am</div>
+                        <div class="smallsep"></div>
+                    </div>
+                    <h1>Vincent Li</h1>
+                    <h2>A Canadian full-stack web developer</h2>
+                </div>
+                
+                <!-- header text border -->
+                <!-- <svg class="gm-intro-border" width="795" height="300">
+                    <rect width="100%" height="100%" fill-opacity="0" style="stroke-width:3;stroke:white;">
+                </svg> -->
+
+                <!-- header text arrow down -->
+                <!-- <div class="scrolldown-container">
+                    <div class="scrolldown-btn">
+                        <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="50px" height="80px" viewbox="0 0 50 80" enable-background="new 0 0 50 80" xml:space="preserve">
+                            <path fill="#FFFFFF" d="M24.752,79.182c-0.397,0-0.752-0.154-1.06-0.463L2.207,57.234c-0.306-0.305-0.458-0.656-0.458-1.057                  s0.152-0.752,0.458-1.059l2.305-2.305c0.309-0.309,0.663-0.461,1.06-0.461c0.398,0,0.752,0.152,1.061,0.461l18.119,18.119                  l18.122-18.119c0.306-0.309,0.657-0.461,1.057-0.461c0.402,0,0.753,0.152,1.059,0.461l2.306,2.305                  c0.308,0.307,0.461,0.658,0.461,1.059s-0.153,0.752-0.461,1.057L25.813,78.719C25.504,79.027,25.15,79.182,24.752,79.182z" class="first-path"></path>
+                            <path fill="#FFFFFF" d="M24.752,58.25c-0.397,0-0.752-0.154-1.06-0.463L2.207,36.303c-0.306-0.304-0.458-0.655-0.458-1.057                  c0-0.4,0.152-0.752,0.458-1.058l2.305-2.305c0.309-0.308,0.663-0.461,1.06-0.461c0.398,0,0.752,0.153,1.061,0.461l18.119,18.12                  l18.122-18.12c0.306-0.308,0.657-0.461,1.057-0.461c0.402,0,0.753,0.153,1.059,0.461l2.306,2.305                  c0.308,0.306,0.461,0.657,0.461,1.058c0,0.401-0.153,0.753-0.461,1.057L25.813,57.787C25.504,58.096,25.15,58.25,24.752,58.25z" class="second-path"></path>
+                        </svg>
+                    </div>
+                </div> -->
+
+                <!-- animated background -->
+                <!-- <canvas id="universe"></canvas> -->
+
+                <!-- svg footer(for intro section) -->
+                <div id="svgbase">
+                </div>
+            </div>
+        </section>
+        
+        <section class="about">
+            <div class="content">
+
+                    <p>I specialize in JavaScript development, from jQuery and AngularJS to NodeJS. 
+                    I participate actively in the open source community; 
+                    notably towards Swift, jQuery, and ES6 JS.</p>
+
+            </div>
+        </section>
+        
+        <section class="experience">
+            <div class="content">
+                
+
+                    JS - OOP (Prototype inheritance, encapsulation, constuctor/prototype design patterns) <br >
+                         Closures and "this"-context                                                      <br >  
+                         Functional JS (Loops, recursion, relationship to DOM)                            <br >
+                         Automation and Testing (JasmineJS Karma TravisCI Stack, minification, performance/load testing) <br >
+                         Versioning - ES6, 'strict', <IE8 <br >
+                         APIs - WitAI, D3.js, Google Map, ParallaxJS, Stats.js, Express webservers, Socket IO, Firebase, Nymi bracelet, YouTube, Chrome Plug-ins, Chrome Apps, Myo armband <br >
+                    <br >
+                    CSS - Hierarchical, modular design patterns (Vanilla, SCSS, LESS) <br >
+                          Animations (Timings, cross-browser, transitions) <br >
+                          Responsive (Media query, loadCSS JS project) <br >
+                          Compatibility (HTML Shiv, reset.css & normalize.css; and their differences) <br >
+                    <br >
+                    Python - <br >
+                    <br >
+                    C# - <br >
+                    <br >
+                    SQL - Create/read/write, normalization, refactoring <br >
+                    <br >
+                    HTTP/HTTPS (Headers, request and response, monitoring traffic with Fiddler) <br >
+                    <br >
+                    REST (Post/Put/Patch -> JSON) & SOAP(Namespacing, XML) web services <br >
+                    <br >
+                    Version control - git, GitHub Enterprise, TFS(VSTS) <br >
+
+
+            </div>
+        </section>
+        
+        <section class="employment">
+            <div class="content">
+                
+            </div>
+        </section>
+        
+        <section class="contact">
+            <div class="content">
+                
+            </div>
+
+            <div class="footer">
+
+            </div>
+        </section>
+
+    </div>
+
+    <!-- <script type="text/javascript" src="javascripts/main.js"></script> -->
+</body>
+
+</html>
