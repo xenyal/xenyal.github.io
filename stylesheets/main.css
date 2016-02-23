@@ -3,9 +3,31 @@ body {
     /* still need to add consistent styles across the site*/
     
     overflow: hidden;
-    background-image: radial-gradient(1600px at 70% 120%, rgba(33, 39, 80, 1) 10%, #020409 100%);
     opacity: 0;
     animation: onload-fadein 1s ease-in forwards;
+    background-image: radial-gradient(1600px at 70% 120%, rgba(33, 39, 80, 1) 10%, #020409 100%);
+}
+section {
+    height: 768px;
+    width: 100%;
+}
+section .intro {
+    background-image: radial-gradient(1600px at 70% 120%, rgba(33, 39, 80, 1) 10%, #020409 100%);
+}
+section .about {
+    position: absolute;
+    background-color: rgb(60, 120, 150);
+    padding: 0 1em;
+    font-size: 4em;
+}
+section .experience {
+
+}
+section .employment {
+
+}
+section .contact {
+
 }
 .gm-intro {
     width: 795px;
@@ -24,7 +46,7 @@ body {
     padding: 2.5em 8em 4.5em 8em;
     animation: onload-fadein 1s ease-in forwards;
     animation-delay: 1.5s;
-    background: rgba(60, 122, 137, .8);
+    background: rgba(60, 122, 137, .86);
 }
 
 .gm-intro #welcometo {
@@ -248,26 +270,4 @@ body {
         transform: translate(0, 0px);
         opacity: 0.6;
     }
-}
-section {
-    height: 768px;
-    width: 100%;
-}
-section .intro {
-    background-image: radial-gradient(1600px at 70% 120%, rgba(33, 39, 80, 1) 10%, #020409 100%)
-}
-section .about {
-    position: absolute;
-    background-color: rgb(60, 120, 150);
-    padding: 0 1em;
-    font-size: 4em;
-}
-section .experience {
-
-}
-section .employment {
-
-}
-section .contact {
-
 }
