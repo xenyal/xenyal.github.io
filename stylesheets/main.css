@@ -116,9 +116,13 @@ section .contact {
     user-select: none;
     cursor: default
 }
-#universe {
+canvas #universe {
     width: 100%;
     height: 100%
+}
+canvas #network {
+    position: relative;
+    z-index: 2000;
 }
 #svgbase {
     position: absolute;
